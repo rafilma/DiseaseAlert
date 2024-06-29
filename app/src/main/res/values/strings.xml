@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Disease Alert</string>
+    <string name="myname">Rafil Moehamad Alif</string>
+    <string name="myemail">rafilmoehamad16@wastukancana.ac.id</string>
+    <string name="desc_back">Go Back</string>
+    <string name="synop">Aplikasi yang di dasari dataset untuk memeriksa kesehatan, apakah seseorang memiliki penyakit tertentu atau dia baik-baik saja, berdasarkan sampel atau parameter darah, datanya sangat mengejutkan, Anda dapat menggunakannya hanya untuk belajar, saya mencari persentase setiap parameter dan apa akan terjadi jika parameter ini tinggi atau rendah, dan penyakit apa yang mungkin Anda derita jika parameter ini tinggi atau rendah, berdasarkan semua informasi dan pencarian ini saya membuat kumpulan data ini hanya untuk pembelajaran dan tujuan ide proyek. \n\nSelain itu, data sudah diskalakan dalam rentang (0,1)</string>
+    <string name="desc_about">About Button</string>
+    <string name="desc_share">Share Button</string>
+    <string name="desc_feature">Terdapat 24 Fitur yang digunakan yang mana datanya sudah di scaling dalam range 0 - 1.\nUntuk perhitungan persentase scalingnya seperti ini
+        \n"Glucose": (70, 140),  # mg/dL
+        \n"Cholesterol": (125, 200),  # mg/dL
+        \n"Hemoglobin": (13.5, 17.5),  # g/dL
+        \n"Platelets": (150000, 450000),  # per microliter of blood
+        \n"White Blood Cells": (4000, 11000),  # per cubic millimeter of blood
+        \n"Red Blood Cells": (4.2, 5.4),  # million cells per microliter of blood
+        \n"Hematocrit": (38, 52),  # percentage
+        \n"Mean Corpuscular Volume": (80, 100),  # femtoliters
+        \n"Mean Corpuscular Hemoglobin": (27, 33),  # picograms
+        \n"Mean Corpuscular Hemoglobin Concentration": (32, 36),  # grams per deciliter
+        \n"Insulin": (5, 25),  # microU/mL
+        \n"BMI": (18.5, 24.9),  # kg/m^2
+        \n"Systolic Blood Pressure": (90, 120),  # mmHg
+        \n"Diastolic Blood Pressure": (60, 80),  # mmHg
+        \n"Triglycerides": (50, 150),  # mg/dL
+        \n"HbA1c": (4, 6),  # percentage
+        \n"LDL Cholesterol": (70, 130),  # mg/dL
+        \n"HDL Cholesterol": (40, 60),  # mg/dL
+        \n"ALT": (10, 40),  # U/L
+        \n"AST": (10, 40),  # U/L
+        \n"Heart Rate": (60, 100),  # beats per minute
+        \n"Creatinine": (0.6, 1.2),  # mg/dL
+        \n"Troponin": (0, 0.04),  # ng/mL
+        \n"C-reactive Protein": (0, 3),  # mg/L</string>
+    <string name="desc_model">1.Lapisan Input (Dense): 256 unit, aktivasi ReLU, bentuk input sesuai dengan jumlah fitur dalam X_train_scaled.
+        \n2. Lapisan Dropout: Meregulasi model dengan secara acak menetapkan 20% dari unit input menjadi 0 pada setiap pembaruan selama pelatihan.
+        \n3. Lapisan Dense: 128 unit, aktivasi ReLU.
+        \n4. Lapisan Dropout: Dropout 20%.
+        \n5. Lapisan Dense: 64 unit, aktivasi ReLU.
+        \n6. Lapisan Dropout: Dropout 20%.
+        \n7. Lapisan Output (Dense): 6 unit, aktivasi softmax untuk klasifikasi multi-kelas.
+        \n8. Arsitektur ini cocok untuk tugas klasifikasi multi-kelas di mana model memprediksi salah satu dari 6 kategori penyakit yang mungkin berdasarkan fitur input.</string>
+</resources>

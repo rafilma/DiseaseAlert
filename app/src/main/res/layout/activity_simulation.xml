@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SimulationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="start|center"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/desc_back"
+            android:onClick="onBackPressed"
+            android:scaleType="centerInside"
+            android:src="@drawable/baseline_arrow_back_24"
+            tools:ignore="UsingOnClickInXml,ImageContrastCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="top|center"
+            android:text="Simulation"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="32dp"
+            android:textStyle="bold|italic"
+            tools:layout_editor_absoluteX="116dp"
+            tools:layout_editor_absoluteY="14dp"
+            tools:ignore="MissingConstraints" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btnCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/Glucose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat Glukosa dalam darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Cholesterol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat Kolesterol dalam darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Hemoglobin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat Hemoglobin dalam darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Platelets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat Platelets dalam darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/White_Blood_Cells"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat Sel Darah Putih"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Red_Blood_Cells"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat Sel Darah Merah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Hematocrit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat Hematokrit dalam darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Mean_Corpuscular_Volume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rata-rata Volume Corpuscular"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Mean_Corpuscular_Hemoglobin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rata-rata Corpuscular Hemoglobin"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Mean_Corpuscular_Hemoglobin_Concentration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rata-rata Konsentrasi Corpuscular Hemoglobin"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Insulin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat Insulin dalam darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/BMI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Indeks Massa Tubuh (BMI)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Systolic_Blood_Pressure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tekanan Darah Sistolik"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Diastolic_Blood_Pressure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tekanan Darah Diastolik"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Triglycerides"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat Trigliserida dalam darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/HbA1c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat HbA1c dalam darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/LDL_Cholesterol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat LDL Kolesterol"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/HDL_Cholesterol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat HDL Kolesterol"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/ALT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat ALT dalam darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/AST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat AST dalam darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Heart_Rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Detak Jantung per Menit"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Creatinine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat Kreatinin dalam darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/Troponin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat Troponin dalam darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/C_reactive_Protein"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tingkat Protein C-reaktif dalam darah"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Predict"
+        app:layout_constraintTop_toBottomOf="@id/mainScrollView"
+        app:layout_constraintBottom_toTopOf="@id/txtResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCheck"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
